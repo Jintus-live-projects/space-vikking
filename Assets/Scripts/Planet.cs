@@ -1,23 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Planet : MonoBehaviour
+using NaughtyAttributes;
+
+[System.Serializable]
+public class Planet
 {
-    public Position positionInGalaxy;
-    public int size;
-    private Environment environement;
-
-    public Loot[] resources;
-    public int difficulty;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    private void FixedUpdate()
-    {
-    }
+    public Position positionInGalaxy = new Position(0, 0);
+    public int size = 0;
+    public int difficulty = 0;
 }

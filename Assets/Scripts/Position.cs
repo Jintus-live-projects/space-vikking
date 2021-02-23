@@ -1,20 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Position : MonoBehaviour
+[System.Serializable]
+public class Position
 {
     public float radius;
-    public float angle;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField, Range(0f, 360f)]
+    public float angle;
+
+    public Position(float radius, float angle)
     {
-        
+        this.radius = radius;
+        this.angle = angle;
     }
 }
